@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ab ya kia he</title>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      font-family: 'Space Grotesk', sans-serif;
+      margin: 0;
+      background: linear-gradient(90deg, #07233b, #041d34, #04192d, #040e18, #050c16);
+      color: white;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 5%;
+      background-color: #041d34;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    header img {
+      height: 50px;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .m-m {
+      text-decoration: none;
+      color: white;
+      text-transform: uppercase;
+      font-weight: 500;
+    }
+
+    .button-primary {
+      background-color: #0788ff;
+      border-radius: 40px;
+      padding: 12px 26px;
+      border: 2px solid #0788ff;
+    }
+
+    .button-primary a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+      text-transform: uppercase;
+      font-size: 14px;
+      letter-spacing: 1px;
+    }
+
+    .home {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 0 5%;
+      padding: 60px 0;
+      flex-wrap: wrap;
+      gap: 40px;
+    }
+
+    .home .text-content {
+      flex: 1;
+    }
+
+    .home .image-content {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .home h1 {
+      font-size: 60px;
+      font-weight: 700;
+      text-transform: uppercase;
+      margin: 0;
+    }
+
+    .home h2 span {
+      font-size: 50px;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: #0788ff;
+    }
+
+    .highlight {
+      background-color: rgba(7, 136, 255, 0.2);
+      padding: 6px 14px;
+      border-radius: 4px;
+      text-transform: uppercase;
+      font-size: 16px;
+      letter-spacing: 4px;
+      display: inline-block;
+    }
+
+    .home p {
+      font-size: 18px;
+      line-height: 28px;
+      margin: 20px 0;
+      text-transform: capitalize;
+      max-width: 380px;
+    }
+
+    .home img.hero {
+      max-height: 500px;
+      width: 100%;
+      object-fit: contain;
+    }
+
+    .social-icons {
+      display: flex;
+      gap: 10px;
+      margin-top: 20px;
+    }
+
+    .social-icons img {
+      width: 40px;
+      height: 40px;
+      object-fit: contain;
+      border-radius: 4px;
+    }
+
+    .brands-row {
+      background-color: rgba(7, 136, 255, 0.1);
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      padding: 20px 5%;
+      flex-wrap: wrap;
+      margin-top: 40px;
+    }
+
+    .brands-row > div {
+      flex: 1 1 220px;
+      max-width: 292px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 10px;
+    }
+
+    .brands-row img {
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+      display: block;
+    }
+
+    .about {
+      margin: 60px 5%;
+      display: flex;
+      gap: 40px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .about > div {
+      flex: 1;
+      min-width: 300px;
+    }
+
+    .about img {
+      width: 100%;
+      max-width: 500px;
+      border-radius: 12px;
+    }
+
+    .section-heading h6 {
+      margin: 0;
+    }
+
+    .section-heading h2 {
+      font-size: 36px;
+      text-transform: uppercase;
+      margin: 10px 0 20px;
+    }
+
+    .section-heading h2 span {
+      color: #0788ff;
+    }
+
+    .about p {
+      font-size: 16px;
+      line-height: 1.7;
+      margin-bottom: 30px;
+      max-width: 600px;
+    }
+
+    .about-stats {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      margin-bottom: 30px;
+    }
+
+    .about h3 {
+      font-size: 28px;
+      color: #0788ff;
+      margin: 0;
+    }
+
+    .about label {
+      font-size: 14px;
+      color: #ccc;
+      display: block;
+      margin-top: 5px;
+    }
+
+    .about .button-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background-color: #041d34;
+      margin-top: 60px;
+    }
+
+    @media (max-width: 768px) {
+      .home, .about {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .home h1, .home h2 span, .section-heading h2 {
+        font-size: 40px;
+      }
+
+      .about h3 {
+        font-size: 24px;
+      }
+
+      .about p {
+        font-size: 15px;
+      }
+
+      .about-stats {
+        justify-content: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <a href="index.html"><img src="images/logo.svg" alt="Site Logo" /></a>
+    <nav>
+      <a class="m-m" href="#home">home</a>
+      <a class="m-m" href="#about">about me</a>
+      <a class="m-m" href="#projects">projects</a>
+      <a class="m-m" href="#services">services</a>
+      <a class="m-m" href="#contact">contact</a>
+    </nav>
+    <div class="button-primary">
+      <a href="#contact">Let's Talk</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="home" id="home">
+      <div class="text-content">
+        <h6><span class="highlight">jenna ortega</span></h6>
+        <h1>Hay! I’m Jenna</h1>
+        <h2><span>i'm a developer</span></h2>
+        <p>
+          Yet bed any for travelling assistance indulgence unpleasing. Not thoughts all exercise blessing.
+        </p>
+        <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 20px;">
+          <div class="button-primary">
+            <a href="#contact">get in touch</a>
+          </div>
+          <div class="social-icons">
+            <a href="#"><img src="images/arplogo.png" alt="Social 1" /></a>
+            <a href="#"><img src="images/arplogo.png" alt="Social 2" /></a>
+            <a href="#"><img src="images/arplogo.png" alt="Social 3" /></a>
+          </div>
+        </div>
+      </div>
+      <div class="image-content">
+        <img class="hero" src="https://janna-react.vercel.app/images/home-banner.png" alt="Jenna Banner" />
+      </div>
+    </section>
+
+    <div class="brands-row">
+      <div><img src="https://janna-react.vercel.app/images/brand-1.svg" alt="Brand 1" /></div>
+      <div><img src="https://janna-react.vercel.app/images/brand-2.svg" alt="Brand 2" /></div>
+      <div><img src="https://janna-react.vercel.app/images/brand-1.svg" alt="Brand 3" /></div>
+      <div><img src="https://janna-react.vercel.app/images/brand-2.svg" alt="Brand 4" /></div>
+    </div>
+
+    <section class="about" id="about">
+      <div><img src="https://janna-react.vercel.app/images/about-banner.png" alt="About Banner" /></div>
+      <div>
+        <div class="section-heading">
+          <h6><span class="highlight">About Us</span></h6>
+          <h2>I AM AVAILABLE FOR <span>UI UX DESIGN</span> PROJECTS</h2>
+        </div>
+        <p>The standard chunk of Lorem Ipsum used since the 1500s is reproduced for those interested. Sections 1.10.32 and 1.10.33 from de Finibus Bonorum.</p>
+        <div class="about-stats">
+          <div><h3>280<span>+</span></h3><label>Google Review</label></div>
+          <div><h3>15<span>+</span></h3><label>Years Experience</label></div>
+          <div><h3>49<span>+</span></h3><label>Awward Winning</label></div>
+        </div>
+        <div class="button-primary"><a href="#contact">Get in touch</a></div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2025 Abdul Rehman | All Rights Reserved
+  </footer>
+
+</body>
+</html>
