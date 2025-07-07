@@ -34,8 +34,7 @@ body {
     height: 28px;
   }
   
-  /* Responsive */
-  @media (max-width: 1000px) {
+  @media (max-width: 1300px) {
     nav {
       display: none;
     }
@@ -269,7 +268,7 @@ body {
     margin-top: 60px;
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 1200px) {
     .home, .about {
       flex-direction: column;
       text-align: center;
@@ -630,7 +629,6 @@ flex: 0 0 auto;
   opacity: 0.5;
   text-transform: capitalize;
 }
-/* ========= RESPONSIVE ONLY ========= */
 
 @media (max-width: 800px) {
   .ex-card {
